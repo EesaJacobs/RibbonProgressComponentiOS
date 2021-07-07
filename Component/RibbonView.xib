@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RibbonView" customModule="Component" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RibbonView" customModule="Component" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bS-l7-o8D" userLabel="ContentView">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="21M-X2-CgI" userLabel="BackgroundView">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                            <color key="backgroundColor" red="0.92549019607843142" green="0.92941176470588238" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQJ-m4-Mof" userLabel="FillableView">
+                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="100"/>
+                            <color key="backgroundColor" red="0.59607843137254901" green="0.73333333333333328" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" id="gMb-rZ-klY"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="21M-X2-CgI" firstAttribute="height" secondItem="5bS-l7-o8D" secondAttribute="height" id="6tC-KD-KyE"/>
+                        <constraint firstAttribute="bottom" secondItem="eQJ-m4-Mof" secondAttribute="bottom" id="Mpk-T5-cru"/>
+                        <constraint firstItem="eQJ-m4-Mof" firstAttribute="leading" secondItem="5bS-l7-o8D" secondAttribute="leading" id="Y5m-iS-5Ls"/>
+                        <constraint firstItem="21M-X2-CgI" firstAttribute="centerX" secondItem="5bS-l7-o8D" secondAttribute="centerX" id="Ygr-Km-Ay3"/>
+                        <constraint firstItem="eQJ-m4-Mof" firstAttribute="top" secondItem="5bS-l7-o8D" secondAttribute="top" id="aPX-Ct-7Pd"/>
+                        <constraint firstItem="21M-X2-CgI" firstAttribute="width" secondItem="5bS-l7-o8D" secondAttribute="width" id="g77-Ao-QMD"/>
+                        <constraint firstItem="21M-X2-CgI" firstAttribute="centerY" secondItem="5bS-l7-o8D" secondAttribute="centerY" id="gsq-QF-Ofc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="5bS-l7-o8D" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Ayn-Dv-jF6"/>
+                <constraint firstItem="5bS-l7-o8D" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Qtw-CK-94B"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5bS-l7-o8D" secondAttribute="bottom" id="puf-2c-Psv"/>
+                <constraint firstItem="5bS-l7-o8D" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="rPx-Lx-UpY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="contentView" destination="5bS-l7-o8D" id="vnK-Kp-Gln"/>
+                <outlet property="fillableView" destination="eQJ-m4-Mof" id="BTK-RL-cyE"/>
+                <outlet property="kFillableViewWidth" destination="gMb-rZ-klY" id="dDM-tc-J08"/>
+            </connections>
+            <point key="canvasLocation" x="18.75" y="103.52112676056338"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
